@@ -2,13 +2,10 @@
 import scrapy
 
 
-class ToScrapeCSSSpider(scrapy.Spider):
-    name = "toscrape-css"
+class ToScrapeSpiderXPath(scrapy.Spider):
+    name = 'toscrape-xpath'
     start_urls = [
-
-         'http://ammanuel.engineer/'
-
-        ,
+        'http://quotes.toscrape.com/',
     ]
 
     def parse(self, response):
