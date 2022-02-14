@@ -38,3 +38,5 @@ jobs:
         name: my-artifact
         path: quotes.json
         retention-days: 5
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v2
