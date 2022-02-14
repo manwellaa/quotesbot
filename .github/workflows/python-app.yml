@@ -36,5 +36,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: my_file.txt
+        path: quotes.json
         retention-days: 5
