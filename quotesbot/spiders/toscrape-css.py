@@ -2,8 +2,8 @@
 import scrapy
 
 
-class ToScrapeSpiderXPath(scrapy.Spider):
-    name = 'toscrape-xpath'
+class ToScrapeCSSSpider(scrapy.Spider):
+    name = "toscrape-css"
     start_urls = [
         'http://quotes.toscrape.com/',
     ]
@@ -19,4 +19,3 @@ class ToScrapeSpiderXPath(scrapy.Spider):
         next_page_url = response.css("li.next > a::attr(href)").extract_first()
         if next_page_url is not None:
             yield scrapy.Request(response.urljoin(next_page_url))
-
